@@ -36,11 +36,27 @@ Execute Django admin using localhost and create details for 10 entries
 
 ## PROGRAM
 
+~~~
+from django.db import models
+from django.contrib import admin
+class Car(models.Model):
+    brand_name=models.CharField()
+    car_name=models.CharField(max_length=20)
+    enginenum=models.IntegerField(max_length=10)
+    release_date=models.DateField()
 
+class CarAdmin(admin.ModelAdmin):
+    list_display=('brand_name', 'car_name', 'enginenum', 'release_date')
+
+from django.contrib import admin
+from.models import Car,CarAdmin
+admin.site.register(Car,CarAdmin)  
+~~~
 
 ## OUTPUT
 
-
+![alt text](<Screenshot 2025-11-26 220420.png>)
+![alt text](<Screenshot 2025-11-26 220828.png>)
 
 ## RESULT
 Thus the program for creating E-commerce website database using ORM hass been executed successfully
