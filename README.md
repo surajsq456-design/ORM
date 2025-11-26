@@ -36,6 +36,8 @@ Execute Django admin using localhost and create details for 10 entries
 
 ## PROGRAM
 
+~~~
+
 from django.db import models
 from django.contrib import admin
 class Car(models.Model):
@@ -51,7 +53,7 @@ from django.contrib import admin
 from.models import Car,CarAdmin
 admin.site.register(Car,CarAdmin)
 
-
+~~~
 
 ## OUTPUT
 
